@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.3/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Success page</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- second page stylesheet-->
+</head>
+<body>
+  <main>
+    <div class="container-fluid">
+        <div class="new-container" style="
+            width: 350px;
+            padding: 30px;
+            
+            ">
+        <i class="fas fa-check-circle fa-4x custom-icon"></i> 
+        <h1>Thanks for subscribing!</h1>
+        <p>A confirmation email has been sent to <span id="email-placeholder"></span>. Please open it and click the button inside to confirm your subscription</p>
+        <button class="btn w-100" style="
+        background-color: blue;
+        color: white;
+        height: 50px;
+        font-size: 13px;
+        "
+        
+        onclick="window.location.href= 'index.html';">Dismiss message</button>
+        </div>
+    </div>
+  </main>
+  <script>
+    const email = localStorage.getItem('email');
+    const emailPlaceholder = document.getElementById('email-placeholder');
+        if(emailPlaceholder){
+            emailPlaceholder.textContent = email;
+        }
+    localStorage.removeItem('email');
+  </script>
+</body>
+</html>

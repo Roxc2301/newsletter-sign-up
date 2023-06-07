@@ -2,47 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.3/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 <body>
-
-  <!-- Sign-up form start -->
-
-  Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  <!-- Success message end -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6" >
+          <div id="container-padding">
+          <!-- Sign-up form start -->
+          <h1>Stay updated!</h1>
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            <p><i class="fas fa-check-circle fa-lg custom-icon"></i> Product discovery and building what matters</p>
+            <p><i class="fas fa-check-circle fa-lg custom-icon"></i> Measuring to ensure updates are a success</p>
+            <p><i class="fas fa-check-circle fa-lg custom-icon"></i> And much more!</p>     
+            <div class="mb-3">
+            <!--THIS IS THE FORM ELEMENT-->
+            <form id="form-1" style="padding-top: 15px;" action="">
+              <label id="email-text" style="padding-bottom: 10px;" for="email">Email Address:</label>
+              <input id="valid-email" style="height: 55px; padding: 20px;" class="form-control" placeholder="email@company.com" name="email" required>
+            </div>
+            <button style="height:50px;" id="custom-btn" class="btn w-100">Subscribe to monthly newsletter</button>
+            <script src="email-validation.js"></script>
+          </form>
+          <!--THIS IS THE FORM ELEMENT-->
+        </div>
+        </div>
+        <div class="col-md-6 py-4">
+          <img src="assets/images/illustration-sign-up-desktop.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--Success message start-->
+  <!--Sucesss mesage end-->
 </body>
 </html>
